@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>.clickout() Test Page</title>
+ 
+<script src="http://code.jquery.com/jquery-1.6.3.min.js" type="text/javascript"></script>
+<script src="jquery.clickout.js" type="text/javascript"></script>
+ 
+<script type="text/javascript">
+ 
+  $(document).ready(function ()
+  {
+    $('#divTest')
+      .click(function ()
+      {
+        $('#message').html('.click()<br/>you have clicked inside');
+      })
+      .clickout(function ()
+      {
+        $('#message').html('.clickout()<br/>you have clicked outside');
+      });
+  });
+ 
+</script>
+</head>
+<body>
+  <div id="divTest" style="padding: 5px; width:100px; height: 100px; background: Blue; color: White;">
+    Click inside or outside this square.
+  </div>
+  <div id="message"></div>
+</body>
+</html>
